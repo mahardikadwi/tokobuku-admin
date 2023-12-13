@@ -7,7 +7,8 @@ export default NextAuth({
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET
+      clientSecret: process.env.GOOGLE_SECRET,
+      scope: 'profile email',
     }),
   ],
   adapter: MongoDBAdapter(clientPromise)

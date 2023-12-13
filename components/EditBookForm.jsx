@@ -7,7 +7,6 @@ export default function EditBookForm({
   title: currentTitle,
   description: currentDescription,
   price: currentPrice,
-  images,
 }) {
   const [title, setTitle] = useState(currentTitle || "");
   const [description, setDescription] = useState(currentDescription || "");
