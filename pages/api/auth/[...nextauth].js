@@ -12,6 +12,9 @@ export default NextAuth({
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
-  adapter: MongoDBAdapter({ db: await clientPromise }),
+  adapter: MongoDBAdapter({
+    client: await clientPromise,
+    dbName: 'next-ecommerce', // Replace with your actual database name
+  }),
   database: process.env.MONGODB_URI,
 });
