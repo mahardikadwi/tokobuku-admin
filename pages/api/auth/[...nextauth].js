@@ -11,5 +11,6 @@ export default NextAuth({
       scope: 'profile email',
     }),
   ],
-  adapter: MongoDBAdapter(clientPromise)
+  adapter: MongoDBAdapter(clientPromise),
+  database: process.env.MONGODB_URI,
 })
