@@ -4,7 +4,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-export default function editBooks(){
+export default function EditBooks(){
     const [bookInfo, setBookInfo] = useState(null);
     const router = useRouter();
     const {id} = router.query;

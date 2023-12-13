@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-export default function editBookForm({
+export default function EditBookForm({
   _id,
   title: currentTitle,
   description: currentDescription,
