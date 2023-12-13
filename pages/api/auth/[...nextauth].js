@@ -12,5 +12,5 @@ export default NextAuth({
     }),
   ],
   adapter: MongoDBAdapter(clientPromise),
-  database: "mongodb+srv://mahardikadwi-ecommerce:ecommerce123@cluster0.zchr5i1.mongodb.net/next-ecommerce?retryWrites=true&w=majority",
+  database: process.env.MONGODB_URI,
 })
