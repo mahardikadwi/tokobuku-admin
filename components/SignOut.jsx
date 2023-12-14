@@ -1,11 +1,15 @@
 // components/SignOut.js
 import { signOut } from 'next-auth/react';
 import Layout from './Layout';
+import { useRouter } from 'next/router';
 
 export default function SignOut() {
+  const router = useRouter();
+
   const handleSignOut = async () => {
-    await signOut({ redirect: false, callbackUrl: '/' });
-  };
+    await signOut({redirect: false});
+    router.push("/");
+  }
 
   return (
     <Layout>
