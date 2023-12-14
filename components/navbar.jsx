@@ -4,9 +4,9 @@ import React from "react";
 
 const Navbar = () => {
   const inactiveLinks = "flex gap-1 p-1";
-  const activeLinks = inactiveLinks+" bg-white text-slate-900 rounded-l-lg";
+  const activeLinks = inactiveLinks + " bg-white text-slate-900 rounded-l-lg";
   const router = useRouter();
-  const {pathname} = router;
+  const { pathname } = router;
 
   return (
     <aside className="text-white p-4 pr-0">
@@ -28,7 +28,10 @@ const Navbar = () => {
         <span className="logo px-2">Database TokoBuku</span>
       </Link>
       <nav className="flex flex-col gap-2">
-        <Link href={"/"} className={pathname === ("/") ? activeLinks : inactiveLinks}>
+        <Link
+          href={"/"}
+          className={pathname === "/" ? activeLinks : inactiveLinks}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -45,7 +48,10 @@ const Navbar = () => {
           </svg>
           <span>Dashboard</span>
         </Link>
-        <Link href={"/books"} className={pathname.includes("/books") ? activeLinks : inactiveLinks}>
+        <Link
+          href={"/books"}
+          className={pathname.includes("/books") ? activeLinks : inactiveLinks}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -62,7 +68,10 @@ const Navbar = () => {
           </svg>
           <span>Book Lists</span>
         </Link>
-        <Link href={"/orders"} className={pathname.includes("/orders") ? activeLinks : inactiveLinks}>
+        <Link
+          href={"/orders"}
+          className={pathname.includes("/orders") ? activeLinks : inactiveLinks}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -79,7 +88,12 @@ const Navbar = () => {
           </svg>
           <span>Orders</span>
         </Link>
-        <Link href={"/settings"} className={pathname.includes("/settings") ? activeLinks : inactiveLinks}>
+        <Link
+          href={"/settings"}
+          className={
+            pathname.includes("/settings") ? activeLinks : inactiveLinks
+          }
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -100,6 +114,28 @@ const Navbar = () => {
             />
           </svg>
           <span>Settings</span>
+        </Link>
+        <Link
+          href={"/signout"}
+          className={
+            pathname.includes("/signout") ? activeLinks : inactiveLinks
+          }
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
+            />
+          </svg>
+          <span>Logout</span>
         </Link>
       </nav>
     </aside>
